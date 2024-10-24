@@ -3,5 +3,5 @@
 $host = "localhost";
 $user = 'root';
 $password = 'homework2';  
-$db = 'belli';         //nome del DB
+$db = 'samuele.dimario.XML-DOM';         //nome del DB
 $table_name = 'utenti';
