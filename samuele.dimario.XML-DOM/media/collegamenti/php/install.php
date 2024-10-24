@@ -19,7 +19,7 @@ function if_table_exists ($connection, $tablename){
 //collegamento al dbms e creazione del database
 $connection = new mysqli($host, $user, $password);
 
-mysqli_query($connection, "DROP DATABASE IF EXISTS belli");          //eliminiamolo se esiste già
+mysqli_query($connection, "DROP DATABASE IF EXISTS samuele.dimario.XML-DOM");          //eliminiamolo se esiste già
 mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS samuele.dimario.XML-DOM");    //creiamo il DB
 mysqli_query($connection, "USE samuele.dimario.XML-DOMelli");      //usiamo il DB
 
