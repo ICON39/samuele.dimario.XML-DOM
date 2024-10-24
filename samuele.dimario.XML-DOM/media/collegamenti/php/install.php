@@ -20,8 +20,8 @@ function if_table_exists ($connection, $tablename){
 $connection = new mysqli($host, $user, $password);
 
 mysqli_query($connection, "DROP DATABASE IF EXISTS belli");          //eliminiamolo se esiste già
-mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS belli");    //creiamo il DB
-mysqli_query($connection, "USE belli");      //usiamo il DB
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS samuele.dimario.XML-DOM");    //creiamo il DB
+mysqli_query($connection, "USE samuele.dimario.XML-DOMelli");      //usiamo il DB
 
 //creazione delle tabelle e loro popolamento (con dati scelti da me)
 $tabellaUtenti=	"CREATE TABLE if NOT EXISTS utenti(
