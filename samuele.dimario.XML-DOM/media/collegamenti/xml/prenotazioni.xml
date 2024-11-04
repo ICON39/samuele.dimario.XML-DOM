@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prenotazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/prenotazioni.xsd">
+  
+  
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2024-11-04</dataPrenotazione>
+    <tribuna>
+      <nome>Tribuna 21</nome>
+      <numeroPosto>33</numeroPosto>
+      <costoPosto>29.99</costoPosto>
+    </tribuna>
+  </singolaPrenotazione>
+</prenotazioni>
