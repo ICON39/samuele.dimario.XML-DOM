@@ -13,7 +13,7 @@ E' possibile consultare tutti i file (contenuti nelle relative cartelle) di ques
 - https://github.com/ICON39/samuele.dimario.XML-DOM
 oppure basta cercare gli utenti:
 - 'simobe-git' e accedere alla branch denominata '3rdHomework' 
-- 'ICON39' git di Samuele e la repository 'samuele.dimario.XML-DOM'
+- 'ICON39' e accedere alla repository 'samuele.dimario.XML-DOM'
 e successivamente ci si trova di fronte tutti i file necessari.
 
 
