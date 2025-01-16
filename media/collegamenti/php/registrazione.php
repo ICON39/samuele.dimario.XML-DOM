@@ -8,7 +8,8 @@ $err = "";
 $msg="";
 
 if(isset($_POST["invio"])){
-
+    
+    // Controllo nome inserito
     if( (preg_match("/(?=.+\d)/", $_POST["nome"])) && (preg_match("/(?=.[@#\-$%^&+=§!\?])+/", $_POST["nome"])) ){
         $riprova = 1;
         $err.="Non puoi inserire numeri e/o caratteri speciali nel nome";
@@ -21,7 +22,7 @@ if(isset($_POST["invio"])){
         $err.="- Non puoi inserire un carattere speciale nel nome";
     }
 
-
+    // Controllo cognome inserito
     if( preg_match("/(?=.+\d)/", $_POST["cognome"]) && preg_match("/(?=.[@#\-$%^&+=§!\?])+/", $_POST["cognome"]) ){
         $riprova = 1;
         $err.="Non puoi inserire numeri e/o caratteri speciali nel cognome";
@@ -34,8 +35,7 @@ if(isset($_POST["invio"])){
         $err.="- Non puoi inserire un carattere speciale nel cognome";
     }
 
-
-
+    // Controllo codice fiscale inserito
     if(!preg_match("/^([A-Z]{6})([0-9]{2})([A-Z]+)([0-9]{2})([A-Z]+)([0-9]{3})([A-Z])/", $cf)){
         $err = "- Il codice fiscale da te immesso non rispetta le regole di scrittura!";
         $riprova = 1;
@@ -56,7 +56,7 @@ if(isset($_POST["invio"])){
     } 
 
 
-
+    // Controllo città di nascita inserita
     if( preg_match("/(?=.+\d)/", $_POST["cittaNascita"]) && preg_match("/(?=.[@#\-$%^&+=§!\?])+/", $_POST["cittaNascita"]) ){
         $riprova = 1;
         $err.="Non puoi inserire numeri e/o caratteri speciali nella citt&agrave; di nascita";
@@ -69,20 +69,20 @@ if(isset($_POST["invio"])){
         $err.="- Non puoi inserire un carattere speciale nella citt&agrave; di nascita.";
     }
 
-
-    if(!preg_match('/^[0-9]{10}+$/', $phoneNumber)){
+    // Controllo recapito telefonico inserito, accettiamo numeri senza spazi o separati da trattini/spazi
+    if(!preg_match('/^[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/', $phoneNumber)){
         $err.="<br />- Il numero di telefono da te immesso non &egrave; valido!";
         $riprova = 1;
     }
 
-
+    // Controllo password inserita
     if(!preg_match('/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{4,}$/', $password)) {
         $err.="<br />- La password da te creata non rispetta i requisiti!";
         $riprova = 1;
         if(!preg_match('/\d+/', $password)) {
             $msg="<br />Attenzione! La password deve contenere almeno un numero.";
         }elseif (!preg_match('/[@#\-_$%^&+=§!\?]+/', $password)) {
-            $msg="<br />Attenzione! La password deve contenere almeno unn carattere speciale.";
+            $msg="<br />Attenzione! La password deve contenere almeno un carattere speciale.";
         }elseif(!preg_match('/[a-z]+/', $password)) {
             $msg="<br />Attenzione! La password deve contenere almeno un carattere minuscolo";
         }elseif(!preg_match('/[A-Z]+/', $password)) {
@@ -197,54 +197,58 @@ xml:lang="en" lang="en">
 
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
 
-        <div class="form">        
-            <label for="nome">Nome</label>
-            <input type="text" size="20" name="nome" placeholder="Inserisci nome" required>
+        <div class="form">
+            <label for="nome">Nome </label>
+            <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+            <input type="text" name="nome" size="20" placeholder="Nome" required>
 
             <label for="cognome">Cognome</label>
-            <input type="text" size="20" id="cognome" name="cognome" maxlength="16" placeholder="Inserisci cognome" required>
+            <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+            <input type="text" name="cognome" size="20" placeholder="Cognome" required>
 
             <label for="cf">Codisce fiscale</label>
-            <input type="text" name="cf" size="16" maxlength="16" placeholder="Inserisci codice fiscale" required>
+            <span style="color: white; font-size:80%;">No Caratteri Speciali e Minuscoli</span>
+            <input type="text" size="20" name="cf" maxlength="16" placeholder="Inserisci codice fiscale" required>
 
             <label for="nascita">Data di nascita</label>
             <input type="date" name="dataNascita" placeholder="gg/mm/aaaa" required>
 
             <label for="cittaNascita">Citt&aacute; di nascita</label>
-            <input type="text" size="25" name="cittaNascita" placeholder="Inserisci data di nascita" required>
+            <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+            <input type="text" size="25" name="cittaNascita" required>
 
-            <div class="radio">
-                <label style="margin-top: -4%;" for="sesso">Sesso:</label>
+                <div class="radio">
+                    <label style="margin-top: -4%;" for="sesso">Sesso:</label>
 
-                <label style="margin-top: 3%;" for="maschio">Maschio</label>
-                <input type="radio" name="sesso">
+                    <label style="margin-top: 3%;" for="maschio">Maschio</label>
+                    <input type="radio" name="sesso">
 
-                <label style="margin-top: 3%; margin-left: 5%;" for="femmina">Femmina</label>
-                <input type="radio" name="sesso">
-            </div>
+                    <label style="margin-top: 3%; margin-left: 5%;" for="femmina">Femmina</label>
+                    <input type="radio" name="sesso">
+                </div>
 
-
-            <label for="numero">Recapito telefonico</label>
-            <input type="tel" name="numTel" size="20" maxlength="10" placeholder="Inserisci numero di telefono" required>
+            <label for="numTel">Recapito telefonico</label>
+            <span style="color: white; font-size:80%;">No Prefisso</span>
+            <input type="tel" name="numTel" size="20" placeholder="123-456-7890" required>
             
             <label for="email">Email</label>
-            <input type="email" name="email" size="25" placeholder="Indirizzo di posta elettronica" required>
+            <input type="email" size="25" name="email" placeholder="esempio@dominio" required>
 
             <label for="password">Password</label>
+            <span style="color: white; font-size:80%;">Deve contenere Numero, Carattere Maiuscolo, Minuscolo, Speciale</span>
             <input type="password" size="20" name="password" placeholder="Inserisci password" required>
             <span style="color: red; font-size:80%;"><?php echo $msg ?></span>
-
+                
             <label for="password">Conferma password</label>
-            <input type="password" name="cpassword" size="20" placeholder="Reinserisci password" required>
+            <input type="password" size="20" name="cpassword" placeholder="Reinserisci password" required>
 
-            <div class="submit">
-                <input type="reset" value="Reset">
-                <input type="submit" name="invio" value="Registrati">
-            </div>
+                <div class="submit">
+                    <input type="reset" value="Reset">
+                    <input type="submit" name="invio" value="Registrati">
+                </div>
         </div>
-
-</form>
-
+    </form>
+</fieldset>
 <?php }elseif($riprova == 0){ 
     session_start();
     $_SESSION['dataLogin'] = time();

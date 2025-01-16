@@ -86,20 +86,24 @@ xml:lang="en" lang="en">
         <form action="../php/registrazione.php" method="post">
 
             <div class="form">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" size="20" placeholder="Inserisci nome" required>
+                <label for="nome">Nome </label>
+                <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+                <input type="text" name="nome" size="20" placeholder="Nome" required>
 
                 <label for="cognome">Cognome</label>
-                <input type="text" name="cognome" size="20" placeholder="Inserisci cognome" required>
+                <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+                <input type="text" name="cognome" size="20" placeholder="Cognome" required>
 
                 <label for="cf">Codisce fiscale</label>
+                <span style="color: white; font-size:80%;">No Caratteri Speciali e Minuscoli</span>
                 <input type="text" size="20" name="cf" maxlength="16" placeholder="Inserisci codice fiscale" required>
 
                 <label for="nascita">Data di nascita</label>
                 <input type="date" name="dataNascita" placeholder="gg/mm/aaaa" required>
 
                 <label for="cittaNascita">Citt&aacute; di nascita</label>
-                <input type="text" size="25" name="cittaNascita" placeholder="Inserisci data di nascita" required>
+                <span style="color: white; font-size:80%;">No Numeri e/o Caratteri Speciali</span>
+                <input type="text" size="25" name="cittaNascita" required>
 
                 <div class="radio">
                     <label style="margin-top: -4%;" for="sesso">Sesso:</label>
@@ -112,12 +116,14 @@ xml:lang="en" lang="en">
                 </div>
 
                 <label for="numTel">Recapito telefonico</label>
-                <input type="tel" name="numTel" size="20" maxlength="10" placeholder="Inserisci numero di telefono" required>
+                <span style="color: white; font-size:80%;">No Prefisso</span>
+                <input type="tel" name="numTel" size="20" placeholder="123-456-7890" required>
             
                 <label for="email">Email</label>
-                <input type="email" size="25" name="email" placeholder="Indirizzo di posta elettronica" required>
+                <input type="email" size="25" name="email" placeholder="esempio@dominio" required>
 
                 <label for="password">Password</label>
+                <span style="color: white; font-size:80%;">Deve contenere Numero, Carattere Maiuscolo, Minuscolo, Speciale</span>
                 <input type="password" size="20" name="password" placeholder="Inserisci password" required>
 
                 <label for="password">Conferma password</label>
