@@ -44,12 +44,10 @@ Gli sviluppi principali di questo progetto avvengono nell'utilizzo e nella gesti
 - 'monoposto.xml', i cui record sono le informazioni che mostriamo agli utenti. All'interno notiamo la presenza di un collegamento 
 con un file CSS per la creazione un'interfaccia grafica personalizzata che facilita la visualizzazione dei dei record. Inoltre abbiamo 
 un collegamento con un file DTD il quale descrive la grammatica utilizzata
-- 'prenotaPosto.xml' il quale consente dalla homepage dell'applicazione di prenotare un posto in tribuna per assistere ad una gara di Formula 1. 
-Accedendo infatti alla sezione 'Prenota il posto' nel box in verde della homepage si entrerà in una pagina in cui sono mostrate le tribune 
+- 'prenotaPosto.xml' il quale consente dalla homepage dell'applicazione di prenotare un posto in tribuna per assistere ad una gara di Formula 1. Accedendo infatti alla sezione 'Prenota il posto' nel box in verde della homepage si entrerà in una pagina in cui sono mostrate le tribune 
 del circuito e i posti totali. In basso si può compilare un form in cui si va a prenotare un posto nella tribuna desiderata, 
 e si può scegliere il numero di posto. Se questo è stato già prenotato, la prenotazione non verrà effettuata e bisognerà cambiare posto. 
-Se invece il numero di posto immesso è fuori dai limiti della tribuna (perchè la tribuna può ospitare meno persone) verrà detto all'utente 
-che il numero di posto non è disponibile. 
+Se invece il numero di posto immesso è fuori dai limiti della tribuna (perchè la tribuna può ospitare meno persone) verrà detto all'utente che il numero di posto non è disponibile. 
 Se invece la prenotazione è andata a buon fine questa verrà stampata in una tabella situata nella pagina collegata alla form, ovvero 'prenotazioniPosto.php'.
 Infine per descrivere la grammatica del file XML fare riferimento al file 'prenotaPosto.dtd'
 - 'prenotazioni.xml' (si riferisce al file php 'prenotazioniPosto.php') permette di effettuare operazioni sulle prenotazioni
