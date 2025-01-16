@@ -68,5 +68,6 @@ else{
 }
 
 mysqli_close($connection);
-header("../../../terzoHomework.php");
+header("Location: ../../../terzoHomework.php");
+exit();
 ?>
