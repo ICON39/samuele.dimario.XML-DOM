@@ -30,7 +30,7 @@
 	</xsd:element>
 	
 	<xsd:element name="dataPrenotazione" type="xsd:date"/>
-	
+
 	<xsd:element name="tribuna">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -45,4 +45,6 @@
   <xsd:element name="numeroPosto" type="xsd:string"/>
   <xsd:element name="costoPosto" type="xsd:decimal"/>
   
+  <xsd:element name="username" type="xsd:string"/>
+
 </xsd:schema>

@@ -31,6 +31,7 @@ xml:lang="en" lang="en"></html>
 </head>
 
 <?php
+session_start();
 
 if(isset($_POST['prenota'])){
     
@@ -40,6 +41,7 @@ if(isset($_POST['prenota'])){
         //salviamo in apposite variabili i dati inviati dalla form
         $tribuna = $_POST['tribuna'];
         $numeroPosto = $_POST['numeroPosto'];
+        $username = $_SESSION['username']; //prendiamo il nome utente dalla sessione
 
         //carichiamo il file XML delle tribune (ovvero 'prenotaPosto.xml' dentro l'apposita cartella) per controllare il numero massimo di posti
         $xmlTribuneFile = '../xml/prenotaPosto.xml';
@@ -123,13 +125,15 @@ if(isset($_POST['prenota'])){
                         $nuovaPrenotazione->addAttribute('pagamentoEffettuato', 'N'); //aggiungiamo l'attributo 'pagamentoEffettuato'
                             //per rispettare la struttura della grammatica XSD. Per sempplicità, settiamo questo attributo a N (cioè NO) per ogni prenotazione
                             //anche perchè dopo la prenotazione non c'è modo di pagare (l'utente non paga mai), e quindi possiamo settarlo sempre su NO
-                            
+                        
                         $nuovaPrenotazione->addChild('dataPrenotazione', $dataPrenotazione);
 
                         $tribunaElem = $nuovaPrenotazione->addChild('tribuna');      //tribuna ha 3 figli (nome, numeroPosto e costoPosto) che procediamo ad inserire
                         $tribunaElem->addChild('nome', $tribuna);
                         $tribunaElem->addChild('numeroPosto', $numeroPosto);
                         $tribunaElem->addChild('costoPosto', $costoPosto);
+
+                        $nuovaPrenotazione->addChild('username', $username);  //inseriamo il nome utente
 
                         //salviamo il file XML formattato con DOMDocument (per avere l'indentazione corretta)
                         //altrimenti il file XML che si aggiorna di volta in volta non sarebbe formattato bene

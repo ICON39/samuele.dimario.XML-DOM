@@ -56,6 +56,7 @@ xml:lang="en" lang="en"></html>
         <tbody>
             <tr style="background-color: yellow; font-size: 120%;">
                 <td style="color: red;">Data Prenotazione</td>
+                <td style="color: red;">Username</td>
                 <td style="color: red;">Tribuna</td>
                 <td style="color: red;">Numero Posto</td>
                 <td style="color: red;">Costo Posto</td>
@@ -68,6 +69,7 @@ xml:lang="en" lang="en"></html>
             foreach ($xml->singolaPrenotazione as $prenotazione) {        //stampiamo in tabella i dati
                 echo "<tr style=\"background-color: pink\";>";
                 echo "<td style=\"color: blue;  font-size: 120%;\">" . $prenotazione->dataPrenotazione . "</td>";
+                echo "<td style=\"font-size: 120%;\">" . $prenotazione->username . "</td>";
                 echo "<td style=\"font-size: 120%;\">" . $prenotazione->tribuna->nome . "</td>";
                 echo "<td style=\"font-size: 120%;\">" . $prenotazione->tribuna->numeroPosto . "</td>";
                 echo "<td style=\"font-size: 120%;\">" . $prenotazione->tribuna->costoPosto . "</td>";

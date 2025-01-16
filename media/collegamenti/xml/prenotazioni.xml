@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <prenotazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/prenotazioni.xsd">
-  
-  
   <singolaPrenotazione pagamentoEffettuato="N">
-    <dataPrenotazione>2024-10-12</dataPrenotazione>
+    <dataPrenotazione>2025-01-16</dataPrenotazione>
     <tribuna>
-      <nome>Piscina</nome>
-      <numeroPosto>25</numeroPosto>
-      <costoPosto>84.99</costoPosto>
+      <nome>Tribuna 1</nome>
+      <numeroPosto>1</numeroPosto>
+      <costoPosto>45.49</costoPosto>
     </tribuna>
+    <username>gino</username>
   </singolaPrenotazione>
 </prenotazioni>
