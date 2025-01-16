@@ -1,3 +1,4 @@
+
 <xml version="1.0" encoding="iso-8859-1">
 <!DOCTYPE html
 PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -44,7 +45,12 @@ xml:lang="en" lang="en"></html>
                 <a href="media/collegamenti/html/scuderie.html" id="a">Team</a>
             </th>
             <th>
-                <a href="media/collegamenti/php/loginn.php" id="a">Login</a>
+                <!-- Aggiungere modifica menu -->
+                <?php if(isset($_COOKIE['accesso'])) : ?>
+                    <a href="media/collegamenti/php/paginaPersonale.php" id="a">Area Riservata</a>
+                <?php else : ?>
+                    <a href="media/collegamenti/php/loginn.php" id="a">Login</a>
+                <?php endif; ?>
             </th>
         </tr>
     </body>

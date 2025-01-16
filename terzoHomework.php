@@ -16,7 +16,7 @@ xml:lang="en" lang="en">
 <?php 
 session_start();
 unset($_SESSION);
-session_destroy();
+
 
 setcookie('accesso', '');
 ?>
@@ -253,13 +253,6 @@ setcookie('accesso', '');
                     alt="niente"/>
                 </td>
 
-                <td>
-                    <img style="margin-left: -3%;"
-                    src="media/img/pronosticiGara.jpg"
-                    width="100%"
-                    height="68%"
-                    alt="niente"/>
-                </td>
             </tr>
             <tr>
                 <th>
@@ -273,10 +266,6 @@ setcookie('accesso', '');
                 <th>
                     <a class="noUnderlined" href="media/collegamenti/html/previsioniMeteo.html" style="font-size: 150%;"
                     title="Scopriamo se ci saranno problemi meteorologici">Previsioni meteo</a>
-                </th>
-                <th>
-                    <a class="noUnderlined" href="media/collegamenti/php/prenotaPosto.php" style="font-size: 150%;"
-                    title="Alcuni pronostici da personaggi famosi">Prenota il posto</a>
                 </th>
                
             </tr>
