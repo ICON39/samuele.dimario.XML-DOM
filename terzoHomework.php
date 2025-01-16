@@ -15,7 +15,7 @@ xml:lang="en" lang="en">
 
 <?php 
 session_start();
-unset($_SESSION);
+
 
 
 setcookie('accesso', '');

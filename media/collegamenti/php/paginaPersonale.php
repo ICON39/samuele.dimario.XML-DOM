@@ -218,7 +218,7 @@ xml:lang="en" lang="en">
 
     </div>
 
-    <p style="font-size: 150%; text-align: center; color: red;">Visualizza le <a href = "../../../prenotazioniPosto.php" style="text-decoration: none; color: blue;" alt="errore">prenotazioni.</a></p>
+    <p style="font-size: 150%; text-align: center; color: red;">Visualizza le <a href = "prenotazioniPosto.php" style="text-decoration: none; color: blue;" alt="errore">prenotazioni.</a></p>
 
 </div>
 

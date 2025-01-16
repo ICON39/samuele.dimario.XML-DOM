@@ -46,7 +46,7 @@ xml:lang="en" lang="en"></html>
             </th>
             <th>
                 <!-- Aggiungere modifica menu -->
-                <?php if(isset($_COOKIE['accesso'])) : ?>
+                <?php if(isset($_SESSION['username'])) : ?>
                     <a href="media/collegamenti/php/paginaPersonale.php" id="a">Area Riservata</a>
                 <?php else : ?>
                     <a href="media/collegamenti/php/loginn.php" id="a">Login</a>
