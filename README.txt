@@ -6,7 +6,7 @@ Studenti:
 
 E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo terzo homework su GitHub, seguendo i seguenti link:
 - https://github.com/simobe-git/lweb/tree/3rdHomework
-- https://github.com/ICON39/samuele.dimario.XML-DOM
+- https://github.com/ICON39/samuele.dimario.XML-DOM (a causa di una svista sono state effettuate modifiche con due account diversi perciò si noti il numero di contribuenti pari a 2)
 oppure basta cercare gli utenti:
 - 'simobe-git' e accedere alla branch denominata '3rdHomework' 
 - 'ICON39' e accedere alla repository 'samuele.dimario.XML-DOM'
