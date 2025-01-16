@@ -6,7 +6,7 @@ Studenti:
 
 E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo terzo homework su GitHub, seguendo i seguenti link:
 - https://github.com/simobe-git/lweb/tree/3rdHomework
-- https://github.com/ICON39/samuele.dimario.XML-DOM
+- https://github.com/ICON39/samuele.dimario.XML-DOM (a causa di una svista sono state effettuate modifiche con due account diversi perciò si noti il numero di collaboratori è 2)
 oppure basta cercare gli utenti:
 - 'simobe-git' e accedere alla branch denominata '3rdHomework' 
 - 'ICON39' e accedere alla repository 'samuele.dimario.XML-DOM'
@@ -21,11 +21,11 @@ quanto più possibile gli argomenti affrontati durante le lezioni/esercitazioni 
 
 DESCRIZIONE: 
 
-Il proggetto possiede una strutturata suddivisione in sottocartelle, in particolare vi sono altre sottocartelle che si occupano della completa implementazione del progetto come la cartella dedicata ai codici HTML per la 
+Il progetto possiede una strutturata suddivisione in sottocartelle, in particolare vi sono altre sottocartelle che si occupano della completa implementazione del progetto come la cartella dedicata ai codici HTML per la 
 visualizzazione del sito, quella PHP per l'implementazione degli script e quella relativa ai codici XML contenente informazioni e le relative grammatiche.
-Come operazione preliminare per poter testare l'applicativo sarà importante eseguire lo script 'install.php' il quale crea e popola il database necessaro, mentre i dati contenuti nel file 'datiDiConnessione.php' e 'connessione.php' servono per instaurare la connessione al DBMS.
-Gli script PHP contenuti in 'media/collegamenti/php' servono oltre che all'identificazione/registrazione dell'utente acnhe per definire le operazoni che questo può eseguire nella propria area personale. In particolare in tale area si possono "prenotare" alcuni servizi gestiti dai file contenuti nel percorso 'media/collegamenti/php/prenotazioni' che permettono di gestire una diversa prenotazione a seconda del servizio di cui l'utente vuole usufruire.
-Abbiamo certato di rendere il codice modulare, come si può notare dai file 'menu.php' e menu2.php', richiamati all'interno di alcuni script per mostrare il menù, tale distinzione avviene poiché i file vengono richiamati in pagine diverse che richiedono percorsi diversi per accedere ai collegamenti (link) all'interno di essi.
+Come operazione preliminare per poter testare l'applicativo sarà importante eseguire lo script 'install.php' il quale crea e popola il database necessario, mentre i dati contenuti nel file 'datiDiConnessione.php' e 'connessione.php' servono per instaurare la connessione al DBMS.
+Gli script PHP contenuti in 'media/collegamenti/php' servono, oltre che all'identificazione/registrazione dell'utente, a definire le operazoni che questo può eseguire nella propria area personale. In particolare in tale area si possono "prenotare" alcuni servizi gestiti dai file contenuti nel percorso 'media/collegamenti/php/prenotazioni' che permettono di gestire una diversa prenotazione a seconda del servizio di cui l'utente vuole usufruire.
+Abbiamo cercato di rendere il codice modulare, come si può notare dai file 'menu.php' e menu2.php', richiamati all'interno di alcuni script per mostrare il menù. Tale distinzione avviene poiché i file vengono richiamati in pagine diverse che richiedono percorsi diversi per accedere ai collegamenti (link) all'interno di essi.
 --------------------------------------------------------------------------------------------------
 
 ESEMPIO:
